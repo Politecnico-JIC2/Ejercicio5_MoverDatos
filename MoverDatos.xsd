@@ -1,34 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="ListaCompras"/>
-  <xs:complexType name="Ventaacredito">
-    <xs:sequence>
-      <xs:element type="xs:date" name="Fechafinpago" minOccurs="0"/>
-      <xs:element name="Cantidad">
-        <xs:simpleType>
-          <xs:restriction base="xs:decimal">
-            <xs:enumeration value="8000"/>
-            <xs:enumeration value="36000"/>
-          </xs:restriction>
-        </xs:simpleType>
-      </xs:element>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="Venta">
-    <xs:sequence>
-      <xs:element type="Ventaacredito" name="Ventaacredito" minOccurs="0"/>
-      <xs:element type="Ventainmediata" name="Ventainmediata" minOccurs="0"/>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="Ventainmediata">
-    <xs:sequence>
-      <xs:element type="xs:decimal" name="Cantidad"/>
-      <xs:element type="xs:decimal" name="Divisa"/>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="ListaCompras">
-    <xs:sequence>
-      <xs:element type="Venta" name="Venta" maxOccurs="unbounded" minOccurs="0"/>
-    </xs:sequence>
-  </xs:complexType>
-</xs:schema>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="ListaCompras" type="TipoListaCompras"/>
+  <xsd:complexType name="Ventaacredito">
+    <xsd:sequence>
+      <xsd:element type="xsd:date" name="Fechafinpago" minOccurs="0"/>
+      <xsd:element name="Cantidad" type="xsd:integer">
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Venta">
+    <xsd:sequence>
+      <xsd:element type="Ventaacredito" name="Ventaacredito" minOccurs="0"/>
+      <xsd:element type="Ventainmediata" name="Ventainmediata" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Ventainmediata">
+    <xsd:sequence>
+      <xsd:element type="xsd:integer" name="Cantidad"/>
+      <xsd:element type="xsd:string" name="Divisa"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="TipoListaCompras">
+    <xsd:sequence>
+      <xsd:element type="Venta" name="Venta" maxOccurs="unbounded" minOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

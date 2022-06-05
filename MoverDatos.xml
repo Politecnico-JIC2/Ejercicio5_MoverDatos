@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE ListaCompras SYSTEM "MoverDatos.dtd">
-
-<ListaCompras>
+<ListaCompras xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:noNamespaceSchemaLocation="MoverDatos.xsd">
     <Venta>
         <Ventaacredito>
-            <Fechafinpago>02-09-2022</Fechafinpago>
+            <Fechafinpago>2022-09-02</Fechafinpago>
             <Cantidad>8000</Cantidad>
         </Ventaacredito>
     </Venta>
