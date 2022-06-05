@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ListaCompras SYSTEM "MoverDatos.dtd">
+
+<ListaCompras>
+    <Venta>
+        <Ventaacredito>
+            <Fechafinpago>02-09-2022</Fechafinpago>
+            <Cantidad>8000</Cantidad>
+        </Ventaacredito>
+    </Venta>
+    <Venta>
+        <Ventaacredito>
+            <Cantidad>36000</Cantidad>
+        </Ventaacredito>
+    </Venta>
+    <Venta>
+        <Ventainmediata>
+            <Cantidad>600</Cantidad>
+            <Divisa>Dólares</Divisa>
+        </Ventainmediata>
+    </Venta>
+</ListaCompras>
